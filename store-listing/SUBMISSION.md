@@ -31,6 +31,7 @@ No account or login is required. Open an ordinary HTTP/HTTPS webpage containing 
 - `.output/shendu-0.1.1-chrome.zip` / `.output/shendu-0.1.1-edge.zip`
 - `public/icons/icon-128.png`, `store-listing/assets/logo-300.png`
 - Localized full descriptions: `zh-CN.md`, `zh-TW.md`, `en.md`
-- Real screenshots and promotional tile: pending browser capture; do not substitute simulated extension UI.
+- Small promotional tile: `store-listing/assets/promo-440x280.png` (Chinese calligraphy title).
+- Real screenshots: pending browser capture; do not substitute simulated extension UI.
 
 Submission must wait for verified public links, required screenshots, and browser smoke tests. Uploading a package is not approval or publication.
