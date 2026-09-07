@@ -1,0 +1,8 @@
+node_modules/
+.pnpm-store/
+.output/
+.wxt/
+coverage/
+*.log
+.DS_Store
+Thumbs.db

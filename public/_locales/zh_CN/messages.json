@@ -1,0 +1,21 @@
+{
+  "appName": {
+    "message": "慎读",
+    "description": "扩展名称"
+  },
+  "appDescription": {
+    "message": "选中文字，通过右键菜单离线查看上下文拼音并使用系统语音朗读。"
+  },
+  "contextMenuShowPinyin": {
+    "message": "显示中文拼音"
+  },
+  "noChineseInSelection": {
+    "message": "选区中没有中文"
+  },
+  "speakPinyin": {
+    "message": "朗读"
+  },
+  "speechUnavailable": {
+    "message": "未检测到本地中文语音，暂时无法朗读"
+  }
+}

@@ -1,0 +1,41 @@
+name: Release packages
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm zip:chrome
+      - run: pnpm zip:edge
+      - run: pnpm zip:safari
+      - run: pnpm audit:chrome
+      - run: pnpm audit:edge
+      - run: pnpm audit:safari
+      - name: Generate checksums
+        shell: bash
+        run: |
+          cd .output
+          sha256sum *.zip > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shendu-${{ github.ref_name }}
+          path: |
+            .output/*.zip
+            .output/SHA256SUMS.txt
+          if-no-files-found: error

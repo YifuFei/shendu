@@ -1,0 +1,50 @@
+{
+  "name": "shendu",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Privacy-first browser extension for contextual Chinese pinyin and pronunciation.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "postinstall": "wxt prepare",
+    "dev": "wxt -b chrome",
+    "dev:edge": "wxt -b edge",
+    "build": "pnpm build:chrome",
+    "build:chrome": "wxt build -b chrome",
+    "build:edge": "wxt build -b edge",
+    "build:safari": "wxt build -b safari",
+    "zip:chrome": "wxt zip -b chrome",
+    "zip:edge": "wxt zip -b edge",
+    "zip:safari": "wxt zip -b safari",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint entrypoints src tests wxt.config.ts vitest.config.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "pnpm lint && pnpm typecheck && pnpm test",
+    "icons": "node scripts/resize-icons.mjs",
+    "fixture": "node scripts/serve-fixture.mjs",
+    "audit:chrome": "node scripts/audit-package.mjs .output/chrome-mv3",
+    "audit:edge": "node scripts/audit-package.mjs .output/edge-mv3",
+    "audit:safari": "node scripts/audit-package.mjs .output/safari-mv3"
+  },
+  "dependencies": {
+    "@pinyin-pro/data": "1.3.1",
+    "pinyin-pro": "3.29.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.4.0",
+    "@types/pngjs": "6.0.5",
+    "eslint": "10.9.1",
+    "jsdom": "30.0.1",
+    "pngjs": "7.0.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0",
+    "vitest": "4.1.11",
+    "wxt": "0.21.4"
+  }
+}

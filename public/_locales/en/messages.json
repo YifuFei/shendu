@@ -1,0 +1,21 @@
+{
+  "appName": {
+    "message": "Shendu",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Select Chinese text to view contextual pinyin offline and hear it with the system voice."
+  },
+  "contextMenuShowPinyin": {
+    "message": "Show Chinese pinyin"
+  },
+  "noChineseInSelection": {
+    "message": "No Chinese text in the selection"
+  },
+  "speakPinyin": {
+    "message": "Speak"
+  },
+  "speechUnavailable": {
+    "message": "No local Chinese voice is available"
+  }
+}

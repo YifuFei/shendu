@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>慎读手工测试页</title>
+    <style>
+      * { letter-spacing: 0.02em !important; }
+      body { max-width: 760px; margin: 40px auto; padding: 0 24px 600px; font: 18px/1.8 system-ui; background: #f4f6ff; color: #172033; }
+      section { margin: 32px 0; padding: 24px; border-radius: 18px; background: #fff; box-shadow: 0 8px 28px #28346918; }
+      .dark { background: #111827; color: #f9fafb; }
+      .edge { position: fixed; right: 4px; bottom: 4px; background: #fff7ed; padding: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>慎读手工测试页</h1>
+    <section>
+      <p>这家银行今天正常营业，行长认为这个方案可行。</p>
+      <p>单字朗读回归：并州文水人。只选择“水”，应显示 shuǐ，并只朗读“水”。</p>
+      <p>重庆的音乐节让游客十分快乐，孩子正在慢慢长大。</p>
+      <p>傳統中文測試：銀行、音樂、重慶、長江。</p>
+      <p>混合内容：Hello，重庆 2026；超过八字：中华人民共和国国家通用语言文字。</p>
+    </section>
+    <section class="dark"><p>深色页面中的中文选区也应保持清晰可读。</p></section>
+    <section><p><span>跨越多个</span><strong> DOM 节点的重庆银行</strong><span>选区。</span></p></section>
+    <section><input value="输入框不在 MVP 支持范围" /><div contenteditable="true">可编辑区域也不在 MVP 支持范围</div></section>
+    <p class="edge">页面边缘的音乐</p>
+  </body>
+</html>
